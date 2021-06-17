@@ -26,19 +26,19 @@
 					<form accept-charset="UTF-8" action="<?= base_url('/auth/authLogin') ?>" role="form" method="POST">
 						<fieldset>
 							<div class="form-group">
-								<input class="form-control" placeholder="Username" name="username" value="<?= old('username') ?>" type="text" required>
+								<input class="form-control" placeholder="Username" id="username" name="username" value="<?= old('username') ?>" type="text" required>
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="Password" name="password" type="password" value="" required>
+								<input class="form-control" placeholder="Password" id="password" name="password" type="password" value="" required>
 							</div>
-							<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+							<input class="btn btn-lg btn-primary btn-block" type="submit" value="Log In" id="login">
 							<br>
 							<div class="text-center w-full p-t-23">
 								<span class="txt1">
-									Belum punya akun?
+									Dont have an account?
 								</span>
 								<a href="<?= base_url('/auth/register') ?>" class="txt2">
-									Daftar disini
+									Sign Up
 								</a>
 							</div>
 						</fieldset>
@@ -48,5 +48,26 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(function() {
+		$('#login').attr('disabled', true);
+		$('#password').change(function() {
+			if ($('#username').val() != '' && $('#password').val() != '') {
+				$('#login').attr('disabled', false);
+			} else {
+				$('#login').attr('disabled', true);
+			}
+		});
+
+		$('#username').change(function() {
+			if ($('#username').val() != '' && $('#password').val() != '') {
+				$('#login').attr('disabled', false);
+			} else {
+				$('#login').attr('disabled', true);
+			}
+		});
+	});
+</script>
 
 <?= $this->endSection(); ?>
