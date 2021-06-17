@@ -4,30 +4,28 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Users extends Migration
+class Posts extends Migration
 {
 	public function up()
 	{
 		$this->forge->addField([
-			'fullname'       => [
-				'type'           => 'VARCHAR',
-				'constraint'     => '20'
-			],
-			'email'       => [
-				'type'           => 'VARCHAR',
-				'constraint'     => '50'
+			'id'       => [
+				'type'           => 'INT',
+				'constraint'     => '5',
+				'auto_increment' => true
+
 			],
 			'username'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '16'
 			],
-			'password'      => [
+			'picture'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
-			'role'       => [
-				'type'           => 'INT',
-				'constraint'     => '2'
+			'caption'      => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '140'
 			],
 			'created_at' => [
 				'type'           => 'DATETIME',
@@ -43,18 +41,15 @@ class Users extends Migration
 			],
 		]);
 
-		// Membuat primary key
-		$this->forge->addKey('username', TRUE);
-
-		// Membuat tabel user
-		$this->forge->createTable('users', TRUE);
+		$this->forge->addKey('id', TRUE);
+		$this->forge->addForeignKey('username', 'users', 'username');
+		$this->forge->createTable('posts', TRUE);
 	}
 
 	//-------------------------------------------------------
 
 	public function down()
 	{
-		// menghapus tabel user
-		$this->forge->dropTable('users');
+		$this->forge->dropTable('posts');
 	}
 }

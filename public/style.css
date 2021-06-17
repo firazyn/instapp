@@ -1,0 +1,33 @@
+body {
+  background-color: #eeeeee;
+}
+
+.h7 {
+  font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+  margin-top: 0.97px;
+}
+
+.gedf-main {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.gedf-card {
+  margin-bottom: 25px;
+}
+
+/**Reset Bootstrap*/
+.dropdown-toggle::after {
+  content: none;
+}
+
+.img-preview {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
