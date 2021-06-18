@@ -39,6 +39,7 @@ class Filters extends BaseConfig
 			'authFilter' => ['except' => [
 				'/', '/admin', '/admin/*',
 				'/user', '/user/*',
+				'/comment', '/comment*'
 			]],
 			'toolbar',
 			//'honeypot'

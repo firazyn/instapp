@@ -6,8 +6,6 @@ use App\Models\UsersModel;
 
 class Auth extends BaseController
 {
-	protected $usersModel;
-
 	public function __construct()
 	{
 		$this->usersModel = new UsersModel();
@@ -110,8 +108,7 @@ class Auth extends BaseController
 
 			return redirect()->to('/auth/login');
 		} else {
-			$validator = \Config\Services::validation();
-			return redirect()->to('/auth/register')->withInput()->with('validation', $validator);
+			return redirect()->to('/auth/register')->withInput();
 		}
 	}
 

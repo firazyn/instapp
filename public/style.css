@@ -31,3 +31,39 @@ body {
   margin-right: auto;
   margin-bottom: 25px;
 }
+
+.img-post {
+  margin-bottom: 25px;
+}
+
+.panel-body {
+  padding: 0px;
+}
+.panel-title {
+  display: inline;
+}
+.label-info {
+  float: right;
+}
+.list-group-item {
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.list-group-item:hover {
+  background-color: rgba(86, 61, 124, 0.1);
+}
+.mic-info {
+  color: #666666;
+  font-size: 11px;
+}
+.action {
+  margin-top: 5px;
+}
+.comment-text {
+  font-size: 12px;
+}
+.btn-block {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}

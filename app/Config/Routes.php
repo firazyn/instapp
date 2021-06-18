@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/auth/login', 'Auth::login');
 $routes->get('/auth/register', 'Auth::register');
 $routes->get('/', 'Main::index');
+$routes->get('/comment/(:any)-(:num)', 'Main::comment/$1/$2');
 
 /*
  * --------------------------------------------------------------------

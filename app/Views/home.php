@@ -29,7 +29,7 @@
                         <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
                             <form action="<?= base_url() ?>/main/uploadPost" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <div col-sm-2 margin-bottom="75%">
+                                    <div col-sm-2>
                                         <img class="img-fluid img-preview">
                                     </div>
                                     <div class="custom-file">
@@ -58,7 +58,7 @@
             </div>
             <!-- Upload Post -->
 
-            <?php foreach ($pics as $p) : ?>
+            <?php foreach ($posts as $p) : ?>
 
                 <!--- Posts -->
                 <div class="card gedf-card">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="card-body">
                         <div col-sm-2>
-                            <img src="/img/pics/<?= $p['picture'] ?>" class="img-fluid">
+                            <img src="/img/pics/<?= $p['picture'] ?>" class="img-fluid img-post">
                         </div>
                         <p class="card-text">
                             <?= $p['caption'] ?>
@@ -97,8 +97,8 @@
                     </div>
                     <div class="card-footer">
                         <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="<?= base_url() ?>/comment/<?= $p['username'] . '-' . $p['id'] ?>" class="card-link"><i class="fa fa-comment"></i> Comment</a>
+                        <!-- <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a> -->
                     </div>
                 </div>
                 <!-- Posts -->
