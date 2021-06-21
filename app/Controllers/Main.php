@@ -115,4 +115,9 @@ class Main extends BaseController
     {
         $this->commentModel->where('id', $id)->delete();
     }
+
+    public function deletePost($id)
+    {
+        $this->postsModel->where('id', $id)->delete();
+    }
 }

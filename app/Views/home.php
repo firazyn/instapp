@@ -78,8 +78,8 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
                                             <div class="h6 dropdown-header">Options</div>
-                                            <a class="dropdown-item" href="#">Edit</a>
-                                            <a class="dropdown-item" href="#">Delete</a>
+                                            <!-- <a class="dropdown-item" href="#">Edit</a> -->
+                                            <a class="dropdown-item" href="<?= base_url() ?>/main/deletePost/<?= $p['id'] ?>">Delete</a>
                                         </div>
                                     </div>
                                 <?php endif ?>

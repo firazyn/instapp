@@ -70,7 +70,6 @@
                                                         By: <?= $c['user_cmt'] ?> on <?= $c['created_at'] ?>
                                                     </div>
                                                     <div class="action">
-
                                                         <a href="<?= base_url() ?>/main/deleteComment/<?= $c['id'] ?>" class="btn btn-danger" onclick="return confirm ('Apakah anda yakin?');"><i class="fa fa-trash-o icon-del-team"></i></a>
                                                     </div>
                                                 </div>
